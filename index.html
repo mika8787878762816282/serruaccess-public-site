@@ -1,52 +1,853 @@
-<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Authentication Required</title><script type=text/llms.txt>
-## Note to agents accessing this page:
+<!DOCTYPE html>
 
-This page requires Vercel authentication. Here are your options:
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SerruAccess – Serrurier 24h/24 Bretagne | 02 55 99 62 02</title>
+<meta name="description" content="SerruAccess, votre serrurier de confiance en Bretagne et Pays de la Loire (35, 22, 56, 29, 44, 53). Disponible 24h/24 et 7j/7. Agréé assurances. Appelez le 02 55 99 62 02.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.serruaccess.fr/">
+<meta name="geo.region" content="FR-35">
+<meta name="geo.placename" content="Bretagne">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"SerruAccess","telephone":"+33255996202","email":"Serruaccess@gmail.com","url":"https://www.serruaccess.fr","address":{"@type":"PostalAddress","addressRegion":"Bretagne","addressCountry":"FR"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},"areaServed":["Ille-et-Vilaine","Côtes-d'Armor","Morbihan","Finistère","Loire-Atlantique","Mayenne"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9973A;
+  --gold-l: #E8B84B;
+  --dark: #0D0D0D;
+  --d2: #131313;
+  --d3: #1A1A1A;
+  --d4: #222;
+  --mid: #383838;
+  --txt: #F0EAE0;
+  --txt2: #C8BFB2;
+  --muted: #7A7268;
+  --green: #25D366;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--txt);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
 
-Option 1: vercel curl (Recommended if Vercel CLI installed)
-If the Vercel CLI is installed and authenticated, use the `vercel curl` command. Docs at: https://vercel.com/docs/cli/curl
+/* ── CURSOR ── */
+#cur{width:11px;height:11px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:exclusion}
+#curR{width:34px;height:34px;border:1px solid var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .13s ease;opacity:.5}
 
-Option 2: Vercel MCP Server (Recommended if Vercel CLI not installed)
-If the Vercel CLI is not installed, the easiest way to get a token is using the get_access_to_vercel_url or web_fetch_vercel_url functions of the Vercel MCP server at https://mcp.vercel.com (Docs at https://vercel.com/docs/mcp/vercel-mcp)
-  
-Option 3: Bypass token (Manual)
-This URL documents how to use the bypass token: https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/protection-bypass-automation
-You need to prompt the user to provide the bypass token to access this page. The URL above also explains how the user can
-access the bypass token. Then you can calculate a URL of the following form and successfully access it: `https://current-domain/current-pathname?x-vercel-set-bypass-cookie=true&x-vercel-protection-bypass=$bypass_token`.
-  </script><style>/*!normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css*/html{line-height:1.15;-webkit-text-size-adjust:100%;height:-webkit-fill-available}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:#0000}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}*,*::before,*::after{box-sizing:border-box}body{--foreground-color: #000000;--background-color: #ffffff;--border-color: #eaeaea;--text-color: #444;--disabled-background: #fafafa;--error-color: #e00;--blue-color: #0057FF;--secondary-text: #666;--link-color: inherit;--spinner-color: #8F8F8F;--button-hover-color: #333;--ds-focus-ring: 0 0 0 2px var(--background-color), 0 0 0 6px var(--blue-color);--monospace-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:var(--background-color);color:var(--foreground-color);display:block;font-family:-apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;height:100vh;height:-webkit-fill-available;margin:0;padding:0;-webkit-font-smoothing:antialiased}button,.link-button{appearance:none;-webkit-appearance:none;background:var(--foreground-color);border:none;border-radius:6px;color:var(--background-color);cursor:pointer;font-size:14px;font-weight:500;height:42px;outline:none;padding:0;transition:all .2s ease 0s;user-select:none;width:100%;display:flex;align-items:center;justify-content:center;text-decoration:none;gap:6px;padding:0 12px}button:hover,.link-button:hover{background-color:var(--button-hover-color);color:var(--background-color)}button:focus-visible,.link-button:focus-visible{box-shadow:var(--ds-focus-ring);outline:none;border:0}button:disabled{background:var(--disabled-background);color:#0000;cursor:not-allowed}h1{color:var(--foreground-color);font-size:24px;font-style:normal;font-weight:600;line-height:32px;letter-spacing:-.5px;margin:0;margin-bottom:20px;text-align:center}hr{border:none;border-top:1px solid var(--border-color);margin:0}input{appearance:none;-webkit-appearance:none;border:1px solid var(--border-color);border-radius:6px;background:var(--background-color);caret-color:var(--foreground-color);color:var(--foreground-color);font-size:14px;height:42px;outline:0;padding:0 16px;transition:border .2s ease 0s,color .2s ease 0s,box-shadow .2s ease 0s}input:focus{border-color:var(--foreground-color);box-shadow:0 0 0 4px #b4b4b466!important}p{color:var(--text-color);font-size:16px;letter-spacing:-.163333px;line-height:24px;margin:0;text-align:center}.card{max-width:380px;width:100%;padding:32px;display:flex;flex-direction:column;margin-bottom:16px}.alert{display:none;margin-top:10px;margin-bottom:20px}.error input{color:var(--error-color);border-color:var(--error-color)}.error .alert{display:flex}.error .message{color:var(--error-color)}.footer{color:var(--secondary-text);font-size:13px;line-height:24px;font-family:var(--monospace-font);text-align:center;margin-top:auto;position:absolute;bottom:30px;width:100%}.footer a{color:var(--link-color);font-weight:500;text-decoration:none;display:flex;justify-content:center;align-items:center}.footer a:hover{text-decoration:underline}.message{font-size:14px;line-height:20px;margin-left:10px}.message b{font-weight:600}.or{display:none;margin-top:24px;margin-bottom:24px;font-family:var(--monospace-font);color:var(--secondary-text);position:relative}.or .badge{align-items:center;background:var(--background-color);display:flex;font-size:12px;font-weight:500;height:20px;justify-content:center;left:50%;line-height:16px;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%);width:32px}.password{display:none}.password-enabled .password{display:block}.password button{position:relative}.password button .spinner-wrapper{position:absolute;transform:(0.8)}.password-enabled.sso-enabled .or{display:block}.sso{display:none}.sso button .vercel{margin-right:10px;transform:translateY(1px)}.sso-enabled .sso{display:block}.sso.error .link-button{border:1px solid var(--error-color)}.auto-redirect{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:8px}.auto-redirect h1{margin:0}.auto-redirect-backup{font-size:14px;color:var(--secondary-text);animation:fade-in .2s .5s ease-out;animation-fill-mode:forwards;opacity:0}.auto-redirect-backup a{color:var(--foreground-color);display:inline}.spinner-wrapper{display:none;height:20px;width:20px;position:relative}.auto-redirect .spinner-wrapper{margin-bottom:16px}form.submitting .spinner-wrapper,.auto-redirect .spinner-wrapper{display:block}.spinner{position:relative;top:50%;left:50%;transform-origin:0 0;height:20px;width:20px}.spinner-bar{-webkit-animation:spinner-spin 1.2s linear infinite;animation:spinner-spin 1.2s linear infinite;background:var(--spinner-color);border-radius:5px;height:8%;left:-10%;position:absolute;top:-3.9%;width:24%}.spinner-bar:nth-child(1){animation-delay:-1.2s;transform:rotate(0.0001deg) translate(146%)}.spinner-bar:nth-child(2){animation-delay:-1.1s;transform:rotate(30deg) translate(146%)}.spinner-bar:nth-child(3){animation-delay:-1s;transform:rotate(60deg) translate(146%)}.spinner-bar:nth-child(4){animation-delay:-.9s;transform:rotate(90deg) translate(146%)}.spinner-bar:nth-child(5){animation-delay:-.8s;transform:rotate(120deg) translate(146%)}.spinner-bar:nth-child(6){animation-delay:-.7s;transform:rotate(150deg) translate(146%)}.spinner-bar:nth-child(7){animation-delay:-.6s;transform:rotate(180deg) translate(146%)}.spinner-bar:nth-child(8){animation-delay:-.5s;transform:rotate(210deg) translate(146%)}.spinner-bar:nth-child(9){animation-delay:-.4s;transform:rotate(240deg) translate(146%)}.spinner-bar:nth-child(10){animation-delay:-.3s;transform:rotate(270deg) translate(146%)}.spinner-bar:nth-child(11){animation-delay:-.2s;transform:rotate(300deg) translate(146%)}.spinner-bar:nth-child(12){animation-delay:-.1s;transform:rotate(330deg) translate(146%)}.check-icon{position:absolute;top:-1px;opacity:0;transform-origin:center center;--stroke-color: var(--background-color);--fill-color: var(--foreground-color)}.disappear{animation:.3s disappear ease-in;animation-fill-mode:forwards}.appear{animation:appear cubic-bezier(0.645,0.045,0.355,1) .3s;animation-fill-mode:forwards}@keyframes disappear{30%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(0);filter:blur(2px)}}@keyframes appear{30%{opacity:0;transform:scale(0.6) rotate(0deg);filter:blur(2px)}100%{opacity:1;transform:scale(1);filter:blur(0px)}}@keyframes fade-in{from{opacity:0}to{opacity:1}}@keyframes spinner-spin{0%{opacity:1}100%{opacity:.15}}.error-icon{width:16px;height:16px;flex-shrink:0;margin-top:3px}.password-input-wrapper{position:relative;display:flex;align-items:center;justify-content:center;gap:10px}.password-input-wrapper input{flex:1}.password-input-wrapper button{flex-shrink:1}.page-wrapper{display:flex;flex-direction:column;min-height:100vh;min-height:-webkit-fill-available;align-items:center;justify-content:center}.content-wrapper{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%}.word-end-wrapper{display:inline-block;position:relative}.authenticated{position:absolute;left:0}[data-status=authenticated] .authenticating,[data-status=authenticating] .authenticated{user-select:none;pointer-events:none}.authenticating>span,.authenticated>span{transition:.2s cubic-bezier(0.645,0.045,0.355,1);transition-property:opacity,filter,transform;display:inline-block;will-change:transform,filter,opacity}.authenticating>span{transition-duration:.2s}.authenticated>span{transition-duration:.25s}[data-status=authenticated] .authenticating>span{transform:translateY(10px);filter:blur(2px);opacity:0}[data-status=authenticating] .authenticated>span{transform:translateY(-6px);filter:blur(2px);opacity:0}[data-status=authenticated] .authenticated>span:nth-child(1){transition-delay:.04s}[data-status=authenticated] .authenticated>span:nth-child(2){transition-delay:.078s}h1[data-status=authenticated]{transform:translateX(2.5px);transition-property:transform,opacity;transition-duration:.22s;transition-timing-function:ease-in-out;transition-delay:.03s}@media(prefers-reduced-motion:reduce){.appear,.disappear{animation-duration:.001ms!important}*{transition:none!important}}@media(prefers-color-scheme:dark){body{--foreground-color: #fff;--background-color: #030303;--border-color: #333;--text-color: #ddd;--disabled-background: #2c2c2c;--disabled-border: #0a0a0a;--error-color: #e00;--secondary-text: #888888;--link-color: inherit;--button-hover-color: #aaa}}
-/* footer readability fix */
-footer, .ft, .fb, .fc, .fbot, footer p, footer li, footer a, footer span{color:#1f2731 !important}
-.fc h5{color:#9a6b1e !important}
-.fb p,.fc ul a,.fbot span{color:#3f4652 !important}
-footer a{font-weight:500}
-footer address{background:#fff !important;color:#1f2731 !important;border:2px solid #ccb98d !important}
-footer address a{color:#9a6b1e !important}
+/* ── MODAL FORMULAIRE ENTRÉE ── */
+#modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+#modal{background:var(--d3);border:1px solid var(--mid);width:100%;max-width:520px;margin:16px;position:relative;animation:slideUp .4s ease}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-top{background:var(--gold);padding:22px 28px;display:flex;justify-content:space-between;align-items:center}
+.modal-top h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--dark);line-height:1}
+.modal-top .msub{font-size:12px;color:rgba(0,0,0,.6);margin-top:3px;letter-spacing:.5px}
+.modal-close{background:rgba(0,0,0,.2);border:none;color:var(--dark);width:32px;height:32px;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:none;flex-shrink:0;transition:background .2s}
+.modal-close:hover{background:rgba(0,0,0,.35)}
+.modal-body{padding:28px}
+.modal-tel{background:var(--d4);border:1px solid var(--mid);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.modal-tel span{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.modal-tel a{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--gold);text-decoration:none;white-space:nowrap;cursor:none}
+.mform-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mf1{grid-column:1/-1}
+.mfg{display:flex;flex-direction:column;gap:5px}
+.mfg label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.mfg input,.mfg select{background:var(--d4);border:1px solid var(--mid);color:var(--txt);padding:11px 13px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:300;outline:none;transition:border-color .3s;width:100%}
+.mfg input:focus,.mfg select:focus{border-color:var(--gold)}
+.mfg select option{background:var(--d4)}
+.modal-actions{display:flex;gap:10px;margin-top:16px}
+.mbtn-g{flex:1;background:var(--gold);color:var(--dark);border:none;padding:14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:none;transition:background .3s}
+.mbtn-g:hover{background:var(--gold-l)}
+.mbtn-skip{background:transparent;color:var(--muted);border:1px solid var(--mid);padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:12px;cursor:none;transition:all .3s;white-space:nowrap}
+.mbtn-skip:hover{border-color:var(--muted);color:var(--txt2)}
+.modal-note{font-size:11px;color:var(--muted);text-align:center;margin-top:12px}
+
+/* ── TICKER BANDS ── */
+.ticker-wrap{background:var(--gold);padding:10px 0;overflow:hidden;white-space:nowrap;position:relative}
+.ticker-wrap.dark{background:var(--d2);border-top:1px solid var(--mid);border-bottom:1px solid var(--mid)}
+.ticker-inner{display:inline-flex;animation:tick 28s linear infinite}
+.ticker-wrap.dark .ticker-inner{animation-duration:38s}
+.ticker-item{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:3px;color:var(--dark);padding:0 32px;display:inline-flex;align-items:center;gap:14px}
+.ticker-wrap.dark .ticker-item{color:var(--muted);font-size:12px}
+.ticker-wrap.light{background:#f6f2ea;border-top:1px solid #e3dccf;border-bottom:1px solid #e3dccf}
+.ticker-wrap.light .ticker-item{color:#b6872e;font-size:12px}
+.ticker-sep{opacity:.4;font-size:18px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 52px;background:rgba(13,13,13,0);transition:background .4s,border-color .4s}
+nav.sc{background:rgba(13,13,13,.97);border-bottom:1px solid var(--mid)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:4px;color:var(--gold);text-decoration:none}
+.logo span{color:var(--txt)}
+.nav-links{list-style:none;display:flex;align-items:center;gap:28px}
+.nav-links a{text-decoration:none;color:var(--txt2);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color .3s;cursor:none}
+.nav-links a:hover{color:var(--gold)}
+.nav-tel{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:var(--gold);text-decoration:none;background:rgba(201,151,58,.12);padding:8px 16px;border:1px solid rgba(201,151,58,.3);white-space:nowrap;cursor:none;transition:background .3s}
+.nav-tel:hover{background:rgba(201,151,58,.22)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:150px 64px 100px;position:relative;z-index:2}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.ey-line{width:36px;height:1px;background:var(--gold)}
+.ey-txt{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(68px,8.6vw,115px);line-height:.9;letter-spacing:1px;color:#d6cec2;margin-bottom:28px}
+h1 .g{color:var(--gold);display:block}
+.hero-sub{font-size:16px;line-height:1.75;color:#7a7064;max-width:400px;margin-bottom:40px}
+.hero-sub strong{color:var(--txt)}
+
+/* hero CTA block — phone prominent */
+.hero-contact-block{background:var(--d3);border:1px solid var(--mid);padding:24px 28px;margin-bottom:28px;position:relative;overflow:hidden}
+.hero-contact-block::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.hcb-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.hcb-phone{font-family:'Bebas Neue',sans-serif;font-size:46px;letter-spacing:4px;color:var(--txt);text-decoration:none;line-height:1;display:block;cursor:none;transition:color .3s}
+.hcb-phone:hover{color:var(--gold)}
+.hcb-meta{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap}
+.hcb-pill{font-size:11px;color:var(--muted);border:1px solid var(--mid);padding:4px 10px;letter-spacing:.5px}
+
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.quick-form{margin:16px 0 18px;background:var(--d3);border:1px solid var(--mid);padding:14px}
+.quick-form .q-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.quick-form .q-grid{display:grid;grid-template-columns:1fr 1fr auto;gap:8px}
+.quick-form input,.quick-form select{background:var(--d4);border:1px solid var(--mid);color:var(--txt);padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:13px}
+.quick-form button{background:var(--gold);border:none;color:var(--dark);padding:0 14px;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;cursor:pointer}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--dark);padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:none;position:relative;overflow:hidden}
+.btn-g::after{content:'';position:absolute;inset:0;background:var(--gold-l);transform:translateX(-101%);transition:transform .35s}
+.btn-g:hover::after{transform:translateX(0)}
+.btn-g > *{position:relative;z-index:1}
+.btn-g .arr{transition:transform .3s}
+.btn-g:hover .arr{transform:translateX(5px)}
+.btn-o{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--txt2);border:1px solid var(--mid);padding:14px 24px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;cursor:none}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+
+/* trust row */
+.trust{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.tb{background:var(--d3);border:1px solid var(--mid);padding:10px 14px;display:flex;align-items:center;gap:8px}
+.tb .ti{font-size:16px}
+.tb .tt strong{display:block;font-weight:500;font-size:12px;color:var(--txt)}
+.tb .tt{font-size:10px;color:var(--muted)}
+
+/* phone strip */
+.pstrip{position:absolute;bottom:0;left:0;right:0;z-index:3;background:var(--d3);border-top:1px solid var(--mid);padding:13px 64px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.dot-live{width:7px;height:7px;background:var(--green);border-radius:50%;animation:bk 2s infinite;flex-shrink:0}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:.2}}
+.pstrip .ptel{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--gold);text-decoration:none;white-space:nowrap;margin-left:4px;cursor:none}
+.pstrip .pright{margin-left:auto;font-size:11px;color:var(--muted)}
+
+/* hero right */
+.hero-r{position:relative;background:var(--d2);overflow:hidden}
+.hero-r::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 55%,rgba(201,151,58,.05));pointer-events:none}
+.key-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.key-svg{width:290px;opacity:.11;animation:rk 35s linear infinite;filter:drop-shadow(0 0 50px rgba(201,151,58,.4))}
+@keyframes rk{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hcard{position:absolute;background:var(--d4);border:1px solid var(--mid);padding:20px 24px}
+.hcard:nth-child(2){bottom:120px;right:48px;animation:fl 7s ease-in-out infinite}
+.hcard:nth-child(3){top:170px;right:80px;animation:fl 9s ease-in-out infinite 2.5s}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hcard .hn{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--gold);line-height:1}
+.hcard .hl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.vtxt{position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(90deg);font-size:9px;letter-spacing:7px;text-transform:uppercase;color:var(--mid);white-space:nowrap}
+
+/* ── GOLD BAND ── */
+.gband{background:var(--gold);min-height:90px;padding:0 64px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
+.gband::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 18px,rgba(0,0,0,.04) 18px,rgba(0,0,0,.04) 36px)}
+.gbt{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--dark);position:relative}
+.gbn{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--dark);letter-spacing:4px;text-decoration:none;position:relative;transition:letter-spacing .3s;white-space:nowrap;cursor:none}
+.gbn:hover{letter-spacing:7px}
+.gbb{background:var(--dark);color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:10px 18px;position:relative;font-weight:500;white-space:nowrap}
+
+/* ── SECTION ── */
+.sec{padding:100px 64px}
+.bg2{background:var(--d2)}
+.shd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px}
+.slbl{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.slbl::before{content:'';width:26px;height:1px;background:var(--gold)}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,4.8vw,58px);letter-spacing:2px;line-height:1;color:var(--txt)}
+.sdesc{max-width:280px;font-size:13px;line-height:1.8;color:var(--muted);text-align:right}
+
+/* ── SERVICES ── */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--mid)}
+.scard{background:var(--d2);padding:42px 36px;position:relative;overflow:hidden;transition:background .4s;cursor:none}
+.scard::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.scard:hover{background:var(--d3)}
+.scard:hover::before{transform:scaleX(1)}
+.snum{position:absolute;top:20px;right:20px;font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(255,255,255,.04);line-height:1;transition:color .3s}
+.scard:hover .snum{color:rgba(201,151,58,.09)}
+.sico{font-size:30px;margin-bottom:18px;display:block;filter:grayscale(1);transition:filter .3s}
+.scard:hover .sico{filter:none}
+.scard h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--txt);margin-bottom:8px}
+.scard p{font-size:13px;line-height:1.7;color:var(--txt2)}
+.stag{display:inline-block;margin-top:16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,151,58,.3);padding:3px 9px}
+
+/* ── TARIFS ── */
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--mid);margin-top:44px}
+.tcard{background:var(--d3);padding:30px 22px;text-align:center;transition:background .3s}
+.tcard:hover{background:var(--d4)}
+.tcard .tnom{font-size:13px;color:var(--txt2);margin-bottom:10px}
+.tcard .tprix{font-family:'Bebas Neue',sans-serif;font-size:34px;color:var(--gold);line-height:1}
+.tcard .tdet{font-size:11px;color:var(--muted);margin-top:5px}
+.tnote{margin-top:18px;padding:13px 16px;border:1px solid var(--mid);font-size:12px;color:var(--muted)}
+
+/* ── PROCESS ── */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;position:relative}
+.pgrid::before{content:'';position:absolute;top:30px;left:12%;width:76%;height:1px;background:linear-gradient(to right,transparent,var(--mid),var(--mid),transparent)}
+.pstep{padding:0 24px;text-align:center}
+.pcirc{width:60px;height:60px;border:1px solid var(--mid);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;background:var(--dark);position:relative;z-index:1;transition:all .4s}
+.pstep:hover .pcirc{border-color:var(--gold);background:rgba(201,151,58,.1)}
+.pn{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold)}
+.pstep h4{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:1px;color:var(--txt);margin-bottom:7px}
+.pstep p{font-size:12px;line-height:1.7;color:var(--txt2)}
+
+/* ── SECTION FORMULAIRE ── */
+.form-sec{padding:90px 64px;background:var(--d2)}
+.form-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start;margin-top:52px}
+
+/* contact sidebar */
+.form-side h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--txt);margin-bottom:4px}
+.form-side .side-sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.side-tel{background:var(--d3);border:1px solid var(--mid);padding:20px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+.side-tel::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.side-tel .stlbl{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.side-tel a{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:3px;color:var(--txt);text-decoration:none;display:block;white-space:nowrap;cursor:none;transition:color .3s}
+.side-tel a:hover{color:var(--gold)}
+.side-tel .stmeta{font-size:11px;color:var(--muted);margin-top:6px}
+.side-mail{background:var(--d3);border:1px solid var(--mid);padding:16px 22px;font-size:13px;color:var(--muted)}
+.side-mail a{color:var(--gold);text-decoration:none;cursor:none}
+.side-zones{margin-top:14px;background:var(--d3);border:1px solid var(--mid);padding:16px 22px}
+.side-zones .szlbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.zone-pills{display:flex;flex-wrap:wrap;gap:6px}
+.zpill{background:var(--d4);border:1px solid var(--mid);padding:5px 11px;font-size:11px;color:var(--txt2)}
+
+/* form box */
+.fbox{background:var(--d3);border:1px solid var(--mid)}
+.fbox-top{background:var(--gold);padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+.fbox-top h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--dark);line-height:1}
+.fbox-top .fsub{font-size:11px;color:rgba(0,0,0,.5);margin-top:3px}
+.live-badge{display:flex;align-items:center;gap:7px;background:rgba(0,0,0,.15);padding:6px 12px;font-size:11px;color:var(--dark);letter-spacing:1px;font-weight:500}
+.fbox-body{padding:28px}
+
+.urg-row{display:flex;align-items:flex-start;gap:12px;background:rgba(201,151,58,.07);border:1px solid rgba(201,151,58,.3);padding:12px 15px;margin-bottom:18px;cursor:pointer}
+.urg-row input[type=checkbox]{width:16px;height:16px;accent-color:var(--gold);cursor:pointer;flex-shrink:0;margin-top:2px}
+.urg-row label{font-size:13px;color:var(--gold);cursor:pointer;line-height:1.4;font-weight:400}
+
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f1{grid-column:1/-1}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select,.fg textarea{background:var(--d4);border:1px solid var(--mid);color:var(--txt);padding:11px 13px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:300;outline:none;transition:border-color .3s;width:100%;resize:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg select option{background:var(--d4)}
+.fg textarea{min-height:70px}
+.ffoot{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+.fnote{font-size:11px;color:var(--muted);line-height:1.5}
+.fsubmit{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--dark);padding:13px 26px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:none;position:relative;overflow:hidden;white-space:nowrap}
+.fsubmit::after{content:'';position:absolute;inset:0;background:var(--gold-l);transform:translateX(-101%);transition:transform .35s}
+.fsubmit:hover::after{transform:translateX(0)}
+.fsubmit span{position:relative;z-index:1}
+.success{display:none;margin-top:14px;padding:13px;font-size:13px;text-align:center;border:1px solid var(--green);color:var(--green);background:rgba(37,211,102,.07)}
+
+/* ── TEMOIGNAGES ── */
+.tigrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2px;background:var(--mid);margin-top:52px}
+.ticard{background:var(--d2);padding:34px}
+.tistars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:12px}
+.titxt{font-size:14px;line-height:1.8;color:var(--txt2);margin-bottom:18px;font-style:italic}
+.titxt::before{content:'"';color:var(--gold);font-size:20px;line-height:1}
+.tiwho{font-size:12px;color:var(--muted)}
+.tiwho strong{display:block;color:var(--txt2);font-weight:500;margin-bottom:2px}
+.tifeat{background:var(--d3);border-left:2px solid var(--gold)}
+
+/* ── FAQ ── */
+.faq-g{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--mid);margin-top:44px}
+.fitem{background:var(--d3);padding:24px 28px;cursor:none;transition:background .3s}
+.fitem:hover{background:var(--d4)}
+.fq{font-size:14px;font-weight:400;color:var(--txt);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.fq .plus{color:var(--gold);font-size:19px;flex-shrink:0;transition:transform .3s}
+.fitem.open .plus{transform:rotate(45deg)}
+.fa{font-size:13px;line-height:1.7;color:var(--txt2);display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--mid)}
+.fitem.open .fa{display:block}
+
+/* ── ZONES ── */
+.zones-g{display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start}
+.zlist{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.ztag{background:var(--d3);border:1px solid var(--mid);padding:10px 14px;font-size:12px;color:var(--txt2);transition:all .3s;cursor:none}
+.ztag strong{display:block;color:var(--txt);font-weight:500;font-size:11px;margin-bottom:1px}
+.ztag:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,151,58,.05)}
+
+/* ── FLOATING WHATSAPP + CONTACT ── */
+.float-btns{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));right:18px;z-index:300;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.wa-btn{display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:12px 18px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.5px;cursor:none;box-shadow:0 4px 24px rgba(37,211,102,.4);transition:all .3s}
+.wa-btn:hover{background:#1ebe5a;transform:translateY(-2px)}
+.wa-btn svg{width:20px;height:20px;flex-shrink:0}
+.call-btn{display:flex;align-items:center;gap:10px;background:var(--gold);color:var(--dark);padding:12px 18px;text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;cursor:none;box-shadow:0 4px 24px rgba(201,151,58,.4);transition:all .3s;white-space:nowrap}
+.call-btn:hover{background:var(--gold-l);transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{background:var(--d2);border-top:1px solid var(--mid);padding:52px 64px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.fb p{font-size:12px;line-height:1.8;color:var(--muted);margin-top:12px;max-width:240px}
+.fc h5{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .3s;cursor:none}
+.fc ul a:hover{color:var(--txt2)}
+.fbot{border-top:1px solid var(--d4);padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+
+/* ── SCROLL REVEAL ── */
+.fu{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.fu.vis{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+nav{padding:16px 18px}
+.nav-links{display:none}
+.hero{grid-template-columns:1fr}
+.hero-r{display:none}
+.hero-l{padding:106px 18px 72px}
+.pstrip{padding:13px 18px}
+.gband{flex-direction:column;min-height:auto;padding:22px 18px;gap:10px;text-align:center}
+.sec{padding:64px 18px}
+.sgrid{grid-template-columns:1fr}
+.tgrid{grid-template-columns:1fr 1fr}
+.pgrid{grid-template-columns:1fr 1fr;gap:32px}
+.pgrid::before{display:none}
+.form-sec{padding:64px 18px}
+.form-inner{grid-template-columns:1fr;gap:32px}
+.fgrid{grid-template-columns:1fr}
+.tigrid{grid-template-columns:1fr}
+.faq-g{grid-template-columns:1fr}
+.zones-g{grid-template-columns:1fr;gap:32px}
+.ft{grid-template-columns:1fr 1fr}
+.fbot{flex-direction:column;gap:6px}
+footer{padding:40px 18px}
+.shd{flex-direction:column;align-items:flex-start;gap:12px}
+.sdesc{text-align:left}
+.float-btns{bottom:calc(10px + env(safe-area-inset-bottom));right:10px}
+.wa-btn,.call-btn{padding:9px 12px;font-size:11px}
+.hcb-phone{font-size:34px;letter-spacing:2px}
+#modal{margin:10px}
+.modal-body{padding:20px}
+.mform-grid{grid-template-columns:1fr}
+.quick-form .q-grid{grid-template-columns:1fr}
+}
+</style>
+
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+
+<!-- ════════════════════════════════════
+     FLOATING BUTTONS
+════════════════════════════════════ -->
+
+<div class="float-btns">
+  <a href="https://wa.me/33255996202?text=Bonjour%20SerruAccess%2C%20j%27ai%20besoin%20d%27un%20serrurier." class="wa-btn" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="tel:+33255996202" class="call-btn">02 55 99 62 02</a>
+</div>
+
+<!-- ════════════════════════════════════
+     NAV
+════════════════════════════════════ -->
+
+<nav id="nav">
+  <a href="/" class="logo">SERRU<span>ACCESS</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#contact-form">Contact</a></li>
+    <li><a href="#zones">Zones</a></li>
+  </ul>
+  <a href="tel:+33255996202" class="nav-tel">02 55 99 62 02</a>
+</nav>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+
+<section class="hero">
+  <div class="hero-l">
+    <div class="eyebrow">
+      <span class="ey-line"></span>
+      <span class="ey-txt">Votre serrurier de confiance en Bretagne</span>
+    </div>
+    <h1>
+      SERRU
+      <span class="g">ACCESS</span>
+    </h1>
 
 
-/* emergency readability override */
-body{color:#1e2630 !important}
-p,li,span,small,label,summary,details,a{color:#2d3745 !important}
-h1,h2,h3,h4,h5,strong,.logo,.sec-title,.fq,.tnom,.tprix,.hcb-phone{color:#161d27 !important}
-.slbl,.ey-txt,.stag,.plus,.hcb-label,.fc h5{color:#9a6b1e !important}
-.hero-desc,.sdesc,.fa,.titxt,.tiwho,.fnote,.fbot span,.fb p,.fc ul a{color:#3f4958 !important}
-#services .scard,#tarifs .tcard,#faq .fitem,#zones .ztag,#contact-form .side-tel,#contact-form .side-mail,#contact-form .side-zones,.fhero,.hcb,.tb{background:#fff !important}
-#services .scard p,#tarifs .tdet,#zones .ztag,#contact-form .stmeta{color:#384252 !important}
-footer *{color:#2b3442 !important}
+<!-- Contact block mis en avant -->
+<div class="hero-contact-block">
+  <div class="hcb-label">Urgence — disponible maintenant</div>
+  <a href="tel:+33255996202" class="hcb-phone">02 55 99 62 02</a>
+  <div class="hcb-meta">
+    <span class="hcb-pill">24h/24 — 7j/7</span>
+    <span class="hcb-pill">Agréé assurances</span>
+    <span class="hcb-pill">Devis gratuit</span>
+  </div>
+</div>
+
+<form class="quick-form" onsubmit="submitForm(event)">
+  <div class="q-title">Formulaire express (début de page)</div>
+  <div class="q-grid">
+    <input type="tel" placeholder="Téléphone *" required>
+    <select>
+      <option>Type de problème</option>
+      <option>Porte claquée / clé perdue</option>
+      <option>Changement de serrure</option>
+      <option>Après effraction</option>
+    </select>
+    <button type="submit">Rappel</button>
+  </div>
+</form>
+
+<p class="hero-sub">
+  Serrurier professionnel sur <strong>6 départements</strong> — Bretagne complète, Loire-Atlantique et Mayenne. Intervention rapide, tarif annoncé avant déplacement.
+</p>
+
+<div class="hero-btns">
+  <a href="#contact-form" class="btn-g"><span>Formulaire d'urgence</span><span class="arr">→</span></a>
+  <a href="https://wa.me/33255996202" class="btn-o" target="_blank">WhatsApp</a>
+</div>
+
+<div class="trust">
+  <div class="tb">
+    <span class="ti">🛡️</span>
+    <div class="tt"><strong>Agréé assurances</strong>RC Pro · A2P</div>
+  </div>
+  <div class="tb">
+    <span class="ti">🗺️</span>
+    <div class="tt"><strong>6 départements</strong>35 · 22 · 56 · 29 · 44 · 53</div>
+  </div>
+  <div class="tb">
+    <span class="ti">⭐</span>
+    <div class="tt"><strong>4.9 / 5</strong>Avis vérifiés</div>
+  </div>
+</div>
 
 
-/* black footer section requested */
-footer .ft{background:#0f1115 !important;border:1px solid #2b313a !important;padding:18px !important;border-radius:12px !important}
-footer .fb,footer .fc{background:transparent !important}
-footer .fb p,footer .fc ul a,footer .fbot span{color:#cfd5dd !important}
-footer .fc h5{color:#c9973a !important}
-footer .logo{background:#0f1115 !important;color:#f3f5f8 !important;border:1px solid #3a414d !important}
-footer .logo span{color:#c9973a !important}
+  </div>
 
-</style><body class=" sso-enabled"><div class=page-wrapper><div class=content-wrapper><div id=card class="card auto-vercel-auth-redirect"><div class=container><noscript><meta http-equiv=refresh content="1; URL=https://vercel.com/sso-api?url=https%3A%2F%2Fserruaccess-newraw-3ytee4v0w-mikas-projects-ac10eb8e.vercel.app%2F&nonce=b92280bb0f19740ec4b43c87d8e414cae85f5aeb473c4e2105d3c33127df9d77"></noscript><div class=auto-redirect><div class=spinner-wrapper><div id=spinner class=spinner><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div><div class=spinner-bar></div></div><div id=check class=check-icon><svg width="20" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24 5.37258 24 0 18.6274.0 12 0 5.37258 5.37258.0 12 0 18.6274.0 24 5.37258 24 12zM17.2955 9.7955 18.091 9 16.5 7.40901 15.7045 8.2045 9.75 14.159 8.2955 12.7045 7.5 11.909 5.90901 13.5 6.7045 14.2955 8.9545 16.5455C9.39384 16.9848 10.1062 16.9848 10.5455 16.5455l6.75-6.75z" fill="var(--foreground-color)" /></svg></div></div><h1 id=auth-status data-status=authenticating>Authenticat<span class=word-end-wrapper>
-<span class=authenticating><span>ing</span></span><span class=authenticated><span>e</span><span>d</span></span></span></h1></div></div><div id=bottom-section><div class="sso"><p id=auto-redirect-backup class=auto-redirect-backup>If you aren't automatically redirected, <a href="https://vercel.com/sso-api?url=https%3A%2F%2Fserruaccess-newraw-3ytee4v0w-mikas-projects-ac10eb8e.vercel.app%2F&nonce=b92280bb0f19740ec4b43c87d8e414cae85f5aeb473c4e2105d3c33127df9d77">click here</a></p></div></div></div></div><div class=footer><a href="https://vercel.com/security?utm_source=protection" target=_blank rel=noopener>Vercel Authentication</a></div></div><script>(function(){var form=document.querySelector('form.password');if(form){var button=form.querySelector('button.submit');function onSubmit(e){form.classList.add("submitting");button.disabled=true;}
-form.addEventListener('submit',onSubmit);}
-function showCheckIconWhenVercelJwtIsSet(){fetch('/.well-known/vercel-user-meta').then((response)=>{if(response.status===200){document.getElementById('spinner').classList.add('disappear')
-document.getElementById('check').classList.add('appear')
-document.getElementById('auth-status').setAttribute('data-status','authenticated')}else{showCheckIconWhenVercelJwtIsSet()}})}
-document.addEventListener("DOMContentLoaded",function(){window.location.href="https://vercel.com/sso-api?url=https%3A%2F%2Fserruaccess-newraw-3ytee4v0w-mikas-projects-ac10eb8e.vercel.app%2F&nonce=b92280bb0f19740ec4b43c87d8e414cae85f5aeb473c4e2105d3c33127df9d77";showCheckIconWhenVercelJwtIsSet()
-document.getElementById('auto-redirect-backup').style.visibility='hidden';});})();</script>
+  <div class="hero-r">
+    <div class="key-wrap">
+      <svg class="key-svg" viewBox="0 0 200 200" fill="none">
+        <circle cx="70" cy="70" r="50" stroke="#C9973A" stroke-width="8"/>
+        <circle cx="70" cy="70" r="28" stroke="#C9973A" stroke-width="4"/>
+        <rect x="112" y="65" width="78" height="13" rx="2" fill="#C9973A"/>
+        <rect x="162" y="78" width="13" height="20" rx="2" fill="#C9973A"/>
+        <rect x="140" y="78" width="13" height="15" rx="2" fill="#C9973A"/>
+      </svg>
+    </div>
+    <div class="hcard"><div class="hn">24H</div><div class="hl">Disponible</div></div>
+    <div class="hcard"><div class="hn">6 dép.</div><div class="hl">Couverts</div></div>
+    <span class="vtxt">SERRUACCESS — BRETAGNE — 24H/7J</span>
+  </div>
+
+  <div class="pstrip">
+    <div class="dot-live"></div>
+    <span>Disponible maintenant</span>
+    <a href="tel:+33255996202" class="ptel">02 55 99 62 02</a>
+    <span class="pright">Serruaccess@gmail.com · 35, 22, 56, 29, 44, 53</span>
+  </div>
+</section>
+
+<!-- TICKER 2 — DARK -->
+
+<div class="ticker-wrap dark">
+  <div class="ticker-inner">
+    <span class="ticker-item">OUVERTURE DE PORTE<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">CHANGEMENT DE SERRURE<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">BLINDAGE A2P<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">APRÈS EFFRACTION<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">SERRURERIE PRO<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">VOLETS ROULANTS<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">RIDEAUX MÉTALLIQUES<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">OUVERTURE DE PORTE<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">CHANGEMENT DE SERRURE<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">BLINDAGE A2P<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">APRÈS EFFRACTION<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">SERRURERIE PRO<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">VOLETS ROULANTS<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">RIDEAUX MÉTALLIQUES<span class="ticker-sep">·</span></span>
+  </div>
+</div>
+
+<!-- GOLD BAND -->
+
+<div class="gband">
+  <div class="gbt">URGENCE SERRURERIE BRETAGNE</div>
+  <a href="tel:+33255996202" class="gbn">02 55 99 62 02</a>
+  <div class="gbb">Disponible 24h / 7j</div>
+</div>
+
+<!-- SERVICES -->
+
+<section class="sec" id="services">
+  <div class="shd">
+    <div>
+      <div class="slbl">Nos prestations</div>
+      <h2>SERVICES<br>COMPLETS</h2>
+    </div>
+    <p class="sdesc">Toutes les situations de serrurerie prises en charge sur 6 départements.</p>
+  </div>
+  <div class="sgrid">
+    <article class="scard fu">
+      <div class="snum">01</div>
+      <span class="sico">🚪</span>
+      <h3>Ouverture de porte</h3>
+      <p>Clé perdue, porte claquée, serrure bloquée. Ouverture fine sans destruction. Toutes serrures Fichet, Vachette, Bricard, Mul-T-Lock.</p>
+      <div class="stag">Urgence 24h/24</div>
+    </article>
+    <article class="scard fu" style="transition-delay:.08s">
+      <div class="snum">02</div>
+      <span class="sico">🔑</span>
+      <h3>Changement de serrure</h3>
+      <p>Remplacement de cylindre ou serrure complète. Toutes marques, toutes certifications, garantie main d'œuvre.</p>
+      <div class="stag">Devis gratuit</div>
+    </article>
+    <article class="scard fu" style="transition-delay:.16s">
+      <div class="snum">03</div>
+      <span class="sico">🛡️</span>
+      <h3>Blindage de porte</h3>
+      <p>Portes blindées certifiées A2P. Protection maximale contre l'effraction, agréée assurances.</p>
+      <div class="stag">Certifié A2P</div>
+    </article>
+    <article class="scard fu" style="transition-delay:.24s">
+      <div class="snum">04</div>
+      <span class="sico">🔧</span>
+      <h3>Dépannage serrure</h3>
+      <p>Serrure grippée, clé cassée, mécanisme défectueux. Diagnostic et réparation sur place.</p>
+      <div class="stag">Réparation</div>
+    </article>
+    <article class="scard fu" style="transition-delay:.32s">
+      <div class="snum">05</div>
+      <span class="sico">💥</span>
+      <h3>Après effraction</h3>
+      <p>Mise en sécurité immédiate, remplacement serrure, rapport assurance. Intervention urgente.</p>
+      <div class="stag">Urgence</div>
+    </article>
+    <article class="scard fu" style="transition-delay:.40s">
+      <div class="snum">06</div>
+      <span class="sico">🏢</span>
+      <h3>Serrurerie pro</h3>
+      <p>Contrats commerces, copropriétés, bureaux. Contrôle d'accès, interphonie, rideaux métalliques.</p>
+      <div class="stag">Entreprises</div>
+    </article>
+  </div>
+</section>
+
+<!-- TARIFS -->
+
+<section class="sec bg2" id="tarifs">
+  <div class="shd">
+    <div>
+      <div class="slbl">Tarifs clairs</div>
+      <h2>PRIX ANNONCÉS<br>AVANT DÉPLACEMENT</h2>
+    </div>
+    <p class="sdesc">Devis gratuit. Aucune mauvaise surprise. Paiement après intervention.</p>
+  </div>
+  <div class="tgrid">
+    <div class="tcard fu"><div class="tnom">Ouverture de porte</div><div class="tprix">dès 90€</div><div class="tdet">TTC · sans destruction</div></div>
+    <div class="tcard fu" style="transition-delay:.08s"><div class="tnom">Changement serrure</div><div class="tprix">dès 120€</div><div class="tdet">TTC · pièces incluses</div></div>
+    <div class="tcard fu" style="transition-delay:.16s"><div class="tnom">Blindage de porte</div><div class="tprix">Sur devis</div><div class="tdet">Gratuit · sans engagement</div></div>
+    <div class="tcard fu" style="transition-delay:.24s"><div class="tnom">Dépannage serrure</div><div class="tprix">dès 80€</div><div class="tdet">TTC · diagnostic inclus</div></div>
+  </div>
+  <div class="tnote fu">Tarifs indicatifs TTC. Prix définitif toujours communiqué avant déplacement. SerruAccess est agréé par les principales compagnies d'assurances — conservez la facture pour remboursement.</div>
+</section>
+
+<!-- PROCESS -->
+
+<section class="sec" id="process">
+  <div class="shd">
+    <div>
+      <div class="slbl">Comment ça marche</div>
+      <h2>INTERVENTION<br>EN 4 ÉTAPES</h2>
+    </div>
+  </div>
+  <div class="pgrid">
+    <div class="pstep fu"><div class="pcirc"><span class="pn">01</span></div><h4>Vous appelez</h4><p>02 55 99 62 02 — disponible 24h/24. Devis immédiat par téléphone.</p></div>
+    <div class="pstep fu" style="transition-delay:.1s"><div class="pcirc"><span class="pn">02</span></div><h4>Devis immédiat</h4><p>Tarif annoncé avant tout déplacement. Aucun frais caché.</p></div>
+    <div class="pstep fu" style="transition-delay:.2s"><div class="pcirc"><span class="pn">03</span></div><h4>Intervention</h4><p>Technicien agréé sur place avec tout le matériel professionnel.</p></div>
+    <div class="pstep fu" style="transition-delay:.3s"><div class="pcirc"><span class="pn">04</span></div><h4>Résolu</h4><p>Facture détaillée, garantie pièces et MO. Paiement après intervention.</p></div>
+  </div>
+</section>
+
+<!-- FORMULAIRE CONTACT -->
+
+<section class="form-sec" id="contact-form">
+  <div class="shd">
+    <div>
+      <div class="slbl">Contact & Urgence</div>
+      <h2>CONTACTEZ<br>SERRUACCESS</h2>
+    </div>
+    <p class="sdesc">Par téléphone pour une urgence, par formulaire pour un devis ou une information.</p>
+  </div>
+  <div class="form-inner">
+    <!-- Sidebar infos -->
+    <div class="form-side fu">
+      <div class="side-tel">
+        <div class="stlbl">Urgence 24h/24</div>
+        <a href="tel:+33255996202">02 55 99 62 02</a>
+        <div class="stmeta">Disponible 24h/24 — 7j/7 — Jours fériés</div>
+      </div>
+      <div class="side-mail">
+        Email : <a href="mailto:Serruaccess@gmail.com">Serruaccess@gmail.com</a>
+      </div>
+      <div class="side-zones">
+        <div class="szlbl">Départements couverts</div>
+        <div class="zone-pills">
+          <span class="zpill">35</span>
+          <span class="zpill">22</span>
+          <span class="zpill">56</span>
+          <span class="zpill">29</span>
+          <span class="zpill">44</span>
+          <span class="zpill">53</span>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Form -->
+<div class="fbox fu" style="transition-delay:.1s">
+  <div class="fbox-top">
+    <div>
+      <h3>DEMANDE D'INTERVENTION</h3>
+      <div class="fsub">Réponse sous 5 minutes</div>
+    </div>
+    <div class="live-badge"><span class="dot-live" style="background:var(--dark)"></span>En ligne</div>
+  </div>
+  <div class="fbox-body">
+    <div class="urg-row">
+      <input type="checkbox" id="urgCb">
+      <label for="urgCb">RAPPEL IMMÉDIAT — Je suis bloqué(e) et ai besoin d'une intervention maintenant</label>
+    </div>
+    <div class="fgrid">
+      <div class="fg"><label>Prénom *</label><input type="text" placeholder="Jean" required></div>
+      <div class="fg"><label>Téléphone *</label><input type="tel" placeholder="06 00 00 00 00" required></div>
+      <div class="fg f1"><label>Adresse *</label><input type="text" placeholder="12 rue de la Paix, Rennes 35000" required></div>
+      <div class="fg"><label>Département</label>
+        <select>
+          <option>35 — Ille-et-Vilaine</option>
+          <option>22 — Côtes-d'Armor</option>
+          <option>56 — Morbihan</option>
+          <option>29 — Finistère</option>
+          <option>44 — Loire-Atlantique</option>
+          <option>53 — Mayenne</option>
+        </select>
+      </div>
+      <div class="fg"><label>Problème *</label>
+        <select required>
+          <option value="">Choisissez...</option>
+          <option>Porte claquée / clé perdue</option>
+          <option>Changement de serrure</option>
+          <option>Après effraction</option>
+          <option>Serrure grippée / en panne</option>
+          <option>Blindage de porte</option>
+          <option>Serrurerie professionnelle</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="fg f1"><label>Description</label>
+        <textarea placeholder="Décrivez votre situation : étage, type de porte, code immeuble..."></textarea>
+      </div>
+    </div>
+    <div class="ffoot">
+      <div class="fnote">Devis gratuit avant intervention<br>Agréé assurances</div>
+      <button class="fsubmit" onclick="submitForm(event)"><span>Envoyer ma demande →</span></button>
+    </div>
+    <div class="success" id="succMsg"></div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- TICKER 3 -->
+
+<div class="ticker-wrap light">
+  <div class="ticker-inner" style="animation-duration:32s;animation-direction:reverse">
+    <span class="ticker-item">SERRUACCESS<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">VOTRE SERRURIER DE CONFIANCE EN BRETAGNE<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">Serruaccess@gmail.com<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">02 55 99 62 02<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">AGRÉÉ ASSURANCES<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">SERRUACCESS<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">VOTRE SERRURIER DE CONFIANCE EN BRETAGNE<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">Serruaccess@gmail.com<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">02 55 99 62 02<span class="ticker-sep">—</span></span>
+    <span class="ticker-item">AGRÉÉ ASSURANCES<span class="ticker-sep">—</span></span>
+  </div>
+</div>
+
+<!-- TÉMOIGNAGES -->
+
+<section class="sec" id="avis">
+  <div class="shd">
+    <div>
+      <div class="slbl">Avis vérifiés</div>
+      <h2>ILS NOUS<br>FONT CONFIANCE</h2>
+    </div>
+    <p class="sdesc">Note 4.9/5. Clients satisfaits à travers toute la Bretagne.</p>
+  </div>
+  <div class="tigrid">
+    <div class="ticard tifeat fu">
+      <div class="tistars">★★★★★</div>
+      <p class="titxt">Arrivé rapidement un dimanche soir. Ma porte ouverte en quelques minutes, aucune dégradation. Tarif respecté à l'euro. Je recommande SerruAccess sans hésitation.</p>
+      <div class="tiwho"><strong>Marie-Claire D.</strong>Rennes (35) — Ouverture de porte</div>
+    </div>
+    <div class="ticard fu" style="transition-delay:.1s">
+      <div class="tistars">★★★★★</div>
+      <p class="titxt">Très professionnel, changement de serrure après cambriolage. Agréé par mon assurance Maif. Je recommande.</p>
+      <div class="tiwho"><strong>Thomas B.</strong>Vannes (56) — Blindage</div>
+    </div>
+    <div class="ticard fu" style="transition-delay:.2s">
+      <div class="tistars">★★★★★</div>
+      <p class="titxt">Appelé à 3h du matin, porte claquée à Nantes. Intervention rapide, tarif honnête. Merci SerruAccess.</p>
+      <div class="tiwho"><strong>Sophia A.</strong>Nantes (44) — Urgence nuit</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="sec bg2" id="faq">
+  <div class="shd">
+    <div>
+      <div class="slbl">Questions fréquentes</div>
+      <h2>FAQ<br>SERRUACCESS</h2>
+    </div>
+  </div>
+  <div class="faq-g">
+    <div class="fitem fu" onclick="tFaq(this)"><div class="fq">Comment contacter SerruAccess en urgence ?<span class="plus">+</span></div><div class="fa">Appelez le 02 55 99 62 02, disponible 24h/24, 7j/7. Vous pouvez aussi écrire à Serruaccess@gmail.com ou remplir le formulaire sur cette page.</div></div>
+    <div class="fitem fu" style="transition-delay:.05s" onclick="tFaq(this)"><div class="fq">Quels départements SerruAccess couvre-t-il ?<span class="plus">+</span></div><div class="fa">SerruAccess intervient dans 6 départements : 35 (Ille-et-Vilaine), 22 (Côtes-d'Armor), 56 (Morbihan), 29 (Finistère), 44 (Loire-Atlantique) et 53 (Mayenne).</div></div>
+    <div class="fitem fu" style="transition-delay:.1s" onclick="tFaq(this)"><div class="fq">SerruAccess est-il agréé assurances ?<span class="plus">+</span></div><div class="fa">Oui, SerruAccess est agréé par les principales compagnies. Conservez votre facture pour le remboursement auprès de votre assureur.</div></div>
+    <div class="fitem fu" style="transition-delay:.15s" onclick="tFaq(this)"><div class="fq">Combien coûte une ouverture de porte ?<span class="plus">+</span></div><div class="fa">À partir de 90€ TTC. Le tarif exact est toujours annoncé gratuitement par téléphone avant toute intervention.</div></div>
+    <div class="fitem fu" style="transition-delay:.2s" onclick="tFaq(this)"><div class="fq">Intervenez-vous la nuit et les jours fériés ?<span class="plus">+</span></div><div class="fa">Oui, disponible 24h/24, 7j/7, week-ends et jours fériés compris, sans majoration cachée.</div></div>
+    <div class="fitem fu" style="transition-delay:.25s" onclick="tFaq(this)"><div class="fq">Que faire si ma clé est cassée dans la serrure ?<span class="plus">+</span></div><div class="fa">Ne forcez pas — appelez le 02 55 99 62 02. Nos techniciens ont des extracteurs professionnels pour retirer la clé sans destruction dans la majorité des cas.</div></div>
+  </div>
+</section>
+
+<!-- ZONES -->
+
+<section class="sec" id="zones">
+  <div class="shd">
+    <div>
+      <div class="slbl">Zones d'intervention</div>
+      <h2>6 DÉPARTEMENTS<br>COUVERTS</h2>
+    </div>
+    <p class="sdesc">Bretagne complète, Loire-Atlantique et Mayenne. Disponible 24h/24.</p>
+  </div>
+  <div class="zones-g">
+    <div class="fu">
+      <p style="font-size:14px;line-height:1.8;color:var(--txt2);margin-bottom:20px">SerruAccess couvre l'ensemble de la Bretagne et les départements limitrophes 44 et 53.</p>
+      <div style="background:var(--d3);border:1px solid var(--mid);padding:18px 22px">
+        <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Codes postaux desservis</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.9">35xxx · 22xxx · 56xxx · 29xxx · 44xxx · 53xxx</div>
+      </div>
+    </div>
+    <div class="zlist">
+      <div class="ztag fu"><strong>35 — Ille-et-Vilaine</strong>Rennes, Saint-Malo, Fougères…</div>
+      <div class="ztag fu" style="transition-delay:.06s"><strong>22 — Côtes-d'Armor</strong>Saint-Brieuc, Dinan, Lannion…</div>
+      <div class="ztag fu" style="transition-delay:.12s"><strong>56 — Morbihan</strong>Vannes, Lorient, Pontivy…</div>
+      <div class="ztag fu" style="transition-delay:.18s"><strong>29 — Finistère</strong>Brest, Quimper, Morlaix…</div>
+      <div class="ztag fu" style="transition-delay:.24s"><strong>44 — Loire-Atlantique</strong>Nantes, Saint-Nazaire…</div>
+      <div class="ztag fu" style="transition-delay:.30s"><strong>53 — Mayenne</strong>Laval, Mayenne, Château-Gontier…</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a href="/" class="logo" style="font-size:26px">SERRU<span>ACCESS</span></a>
+      <p>Votre serrurier de confiance en Bretagne et dans les départements 44 et 53. Disponible 24h/24, 7j/7. Agréé assurances.</p>
+    </div>
+    <div class="fc"><h5>Services</h5><ul>
+      <li><a href="#services">Ouverture de porte</a></li>
+      <li><a href="#services">Changement de serrure</a></li>
+      <li><a href="#services">Blindage de porte</a></li>
+      <li><a href="#services">Dépannage serrure</a></li>
+      <li><a href="#services">Serrurerie professionnelle</a></li>
+    </ul></div>
+    <div class="fc"><h5>Zones</h5><ul>
+      <li><a href="#zones">Serrurier 35 — Ille-et-Vilaine</a></li>
+      <li><a href="#zones">Serrurier 22 — Côtes-d'Armor</a></li>
+      <li><a href="#zones">Serrurier 56 — Morbihan</a></li>
+      <li><a href="#zones">Serrurier 29 — Finistère</a></li>
+      <li><a href="#zones">Serrurier 44 — Loire-Atlantique</a></li>
+      <li><a href="#zones">Serrurier 53 — Mayenne</a></li>
+    </ul></div>
+    <div class="fc"><h5>Contact</h5><ul>
+      <li><a href="tel:+33255996202">02 55 99 62 02</a></li>
+      <li><a href="mailto:Serruaccess@gmail.com">Serruaccess@gmail.com</a></li>
+      <li><a href="https://wa.me/33255996202">WhatsApp</a></li>
+      <li><a href="#contact-form">Formulaire d'urgence</a></li>
+      <li><a href="#">Mentions légales</a></li>
+    </ul></div>
+  </div>
+  <address style="font-style:normal;padding:12px 16px;background:var(--d3);border:1px solid var(--mid);font-size:12px;color:var(--muted);margin-bottom:16px" itemscope itemtype="https://schema.org/LocalBusiness">
+    <span itemprop="name"><strong style="color:var(--txt2)">SerruAccess</strong></span> — Serrurier Bretagne (35, 22, 56, 29, 44, 53) —
+    <a href="tel:+33255996202" itemprop="telephone" style="color:var(--gold);text-decoration:none">02 55 99 62 02</a> —
+    <a href="mailto:Serruaccess@gmail.com" style="color:var(--gold);text-decoration:none">Serruaccess@gmail.com</a>
+  </address>
+  <div class="fbot">
+    <span>© 2025 SerruAccess — Serrurier Bretagne 35 22 56 29 44 53</span>
+    <span>Agréé assurances — RC Pro</span>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px'},70);
+});
+document.querySelectorAll('a,button,.scard,.ztag,.fitem,.tcard').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';curR.style.width='48px';curR.style.height='48px'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='11px';cur.style.height='11px';curR.style.width='34px';curR.style.height='34px'});
+});
+
+
+// Scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{ nav.classList.toggle('sc',window.scrollY>60); });
+
+// Reveal
+const obs=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')}),{threshold:0.08});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+// FAQ
+function tFaq(el){
+  const was=el.classList.contains('open');
+  document.querySelectorAll('.fitem').forEach(f=>f.classList.remove('open'));
+  if(!was)el.classList.add('open');
+}
+
+// Form submit
+function submitForm(e){
+  e.preventDefault();
+  const isUrg=document.getElementById('urgCb').checked;
+  const msg=document.getElementById('succMsg');
+  msg.style.display='block';
+  if(isUrg){
+    msg.style.borderColor='var(--gold)';msg.style.color='var(--gold)';msg.style.background='rgba(201,151,58,.08)';
+    msg.innerHTML='Demande prioritaire envoyée — rappel dans 2 minutes au numéro indiqué.';
+  } else {
+    msg.innerHTML='Demande envoyée. Nous vous rappelons dans moins de 5 minutes. Pour une urgence : <a href="tel:+33255996202" style="color:var(--green)">02 55 99 62 02</a>';
+  }
+  setTimeout(()=>msg.scrollIntoView({behavior:'smooth',block:'center'}),100);
+}
+</script>
+
+</body>
+</html>
